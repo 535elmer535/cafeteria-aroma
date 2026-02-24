@@ -1,2 +1,58 @@
 
+/* 1. estilo general */
+
+body {
+    fort-family: arial,sans-serif;
+    background-color: #fdf6f0;
+    margin: 20px;
+}
+
+/* 2. encabezados */
+
+h1,h2,h3 {
+  color:brown;
+  text-align: center;
+}
+
+/* 3. tablas */
+
+table {
+   border-collapse: collapse;
+   width: 100% 
+}
+table {
+   border-collapse: collapse;
+   width: 100% 
+}
+th,td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+}
+
+/* 4. navegacion */
+
+nav {
+    background-color: #e6ccb2;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3e2723;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #ff5722;   
+      /* cambia de color al pasar el mouse */
+}
+
+/* 5. parrafos */
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 
