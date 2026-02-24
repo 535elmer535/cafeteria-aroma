@@ -10,3 +10,8 @@ node_modules/
 
 #Archivo con credenciales(en backenk)
 .env
+
+privado/
+*.log
+~$*
+
