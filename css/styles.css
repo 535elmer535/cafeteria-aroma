@@ -55,4 +55,19 @@ p {
     line-height: 1.5;
 }
 
+/* mergen vertical suave entre secciones dentro de main */
+
+main >section{
+    margin: 18px 0;
+}
+
+/* separacion para aside (bloque lateral) */
+
+aside {
+    margin: 16px 0 ;
+    padding: 10px;
+    background:#fff8f1;
+    border:1px solid #e1c8ad;
+    border-radius: 6px;
+}
 
