@@ -245,6 +245,41 @@ nav a {
 .btn-secundario {
     background: #d7ccc8; color: #3e2723;
 }
-.btn:hover { opacity: 0.9; }    
+  
+.btn:hover {opacity: 0.9;}
+
+
+/* regla genreral para enlaces del nav */
+
+nav a {color: #3e2723;}
+
+/* regla mas especifica: solo el primer enlace dentro de nav */
+
+nav a: :first-child{color:#5a3825;font-weight:900;}
+
+
+/* Caja visual para secciones de menu */
+
+.seccion-menu-lista {
+   background: #fff8f1;
+   border: 1px solid #e1c8ad;
+   border-radius: 6px;
+   padding: 10px;
+   margin: 14px 0;
+}   
+
+/* Limitar ancho máximo del contenido principal (mejora lectura) */
+
+main { max-width: 980px; margin: 0 auto; }
+
+
+.destacado{
+    background: #fff8f1;
+    border-left: 4px solid brown;
+    padding: 10px;
+}
+
+
+
 
 
