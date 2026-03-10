@@ -255,7 +255,7 @@ nav a {color: #3e2723;}
 
 /* regla mas especifica: solo el primer enlace dentro de nav */
 
-nav a: :first-child{color:#5a3825;font-weight:900;}
+nav a :first-child{color:#5a3825;font-weight:900;}
 
 
 /* Caja visual para secciones de menu */
@@ -279,6 +279,30 @@ main { max-width: 980px; margin: 0 auto; }
     padding: 10px;
 }
 
+#glosario{
+    color:#4e342e;
+    background: #f3e5ab;
+    padding:6px;
+    border-radius: 4px;
+}
+
+.tabla-menu, .tabla-desayunos {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-pedido label {
+    font-weight: bold;
+    color: #5a3825;
+}    
+
+aside ul li a {
+    display: block;
+    padding: 4px;
+    border-bottom: 1px dotted #c7b29a;
+}
+aside ul li a :hover{
+    background :#ffe2c9;
+}
 
 
 
