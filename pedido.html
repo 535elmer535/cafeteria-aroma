@@ -1,155 +1,197 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <title>pedido - cafeteria aroma</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>pedido - cafeteria aroma</title>
 
-        <link rel="stylesheet" href="css/styles.css"/>
-        <!-- Hoja de estilos para impresión -->
-        <link rel="stylesheet" href="css/print.css" media="print" />
-        
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">inicio</a>
-                <a href="menu.html">menu</a>
-                <a href="contacto.html">contacto</a>
-                <a href="pedido.html">pedido</a>
-                <a href="https://cafearoma.com">Sitio Oficial</a>
-            </nav>
-        </header>
-        <hr />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Hoja de estilos para impresión -->
+    <link rel="stylesheet" href="css/print.css" media="print" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">inicio</a>
+        <a href="menu.html">menu</a>
+        <a href="contacto.html">contacto</a>
+        <a href="pedido.html">pedido</a>
+        <a href="https://cafearoma.com">Sitio Oficial</a>
+      </nav>
+    </header>
+    <hr />
 
-        <main>
+    <main>
+      <h1>Formulario de Pedido</h1>
+      <p>
+        Completa tus datos y elige tu pedido. Los campos con * son obligatorios.
+      </p>
+      <form action="#" method="get" class="form-pedido">
+        <fieldset>
+          <legend>Datos del Cliente</legend>
 
-            <h1>Formulario de Pedido</h1>
-            <p>Completa tus datos y elige tu pedido. Los campos con * son obligatorios.</p>
-            <form action="#" method="get" class="form-pedido">
+          <p>
+            <label for="nombre">Nombre Completo *</label><br />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="ej:Ana Perez"
+              required
+            />
+          </p>
 
+          <p>
+            <label for="email">Correo Electrónico *</label><br />
+            <input type="email" id="email" name="email" required />
+          </p>
 
-                <fieldset>
-                    <legend>Datos del Cliente</legend>
+          <p>
+            <label for="tel">Telefono</label><br />
+            <input
+              type="tel"
+              id="tel"
+              name="telefono"
+              placeholder="ej: 71234567"
+              pattern="[0-9]{8,}"
+              title="solo numeros, minimo 8 digitos"
+            />
+          </p>
 
-                    <p>
-                        <label for="nombre">Nombre Completo *</label><br>
-                        <input type="text" id="nombre" name="nombre" placeholder="ej:Ana Perez" required />
-                    </p>
+          <p>
+            <label for="fecha">Fecha de recogida</label><br />
+            <input type="date" id="fecha" name="fecha_recogida" />
+          </p>
 
-                    <p>
-                        <label for="email">Correo Electrónico *</label><br>
-                        <input type="email" id="email" name="email" required />
-                    </p>
+          <p>
+            <label for="hora">Hora de recogida</label><br />
+            <input type="time" id="hora" name="hora_recogida" />
+          </p>
+        </fieldset>
 
-                    <p>
-                        <label for="tel">Telefono</label><br>
-                        <input type="tel" id="tel" name="telefono" placeholder="ej: 71234567" pattern="[0-9]{8,}" title="solo numeros, minimo 8 digitos"/>
-                    </p>
+        <br />
 
-                    <p>
-                        <label for="fecha">Fecha de recogida</label><br>
-                        <input type="date" id="fecha" name="fecha_recogida" >
-                    </p>
+        <fieldset>
+          <legend>Detalle del Pedido</legend>
 
-                    <p>
-                        <label for="hora">Hora de recogida</label><br>
-                        <input type="time" id="hora" name="hora_recogida" >
-                    </p>
-                </fieldset>
+          <p>
+            <label for="bebida">Bebida *</label><br />
+            <select name="bebida" id="bebida" required>
+              <option value="">--selecciona una bebida--</option>
+              <option value="americano">Cafe Americano</option>
+              <option value="capuccino">Capuccino Especial</option>
+              <option value="latte">Latte con Vainilla</option>
+              <option value="latte">Frappe de cafe</option>
+              <option value="latte">Limonada con Menta</option>
+            </select>
+          </p>
 
-                <br>
+          <p>
+            <label for="postre">Postre</label><br />
+            <select name="postre" id="postre">
+              <option value="">--selecciona un postre--</option>
+              <option value="brownie">Brownie Casero</option>
+              <option value="croissant">Croissant de Mantequilla</option>
+              <option value="cheesecake">cheesecake</option>
+            </select>
+          </p>
 
-                <fieldset>
-                    <legend>Detalle del Pedido</legend>
+          <p>
+            <label>Tamaño</label><br />
+            <input
+              type="radio"
+              id="pequeño"
+              name="tamaño"
+              value="pequeño"
+              required
+            />
+            <label for="pequeño">Pequeño</label>
+            <input type="radio" id="mediano" name="tamaño" value="mediano" />
+            <label for="mediano">Mediano</label>
+            <input type="radio" id="grande" name="tamaño" value="grande" />
+            <label for="grande">Grande</label>
+          </p>
 
-                    <p>
-                       <label for="bebida">Bebida *</label><br>
-                       <select name="bebida" id="bebida" required >
-                        <option value="">--selecciona una bebida--</option>                        
-                        <option value="americano">Cafe Americano</option>
-                        <option value="capuccino">Capuccino Especial</option>
-                        <option value="latte">Latte con Vainilla</option>
-                        <option value="latte">Frappe de cafe</option>
-                        <option value="latte">Limonada con Menta</option>
-                       </select>
-                    </p>
+          <p>
+            <label for="cantidad">Cantidad *</label><br />
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              min="1"
+              max="50"
+              value="1"
+              required
+            />
+            <small
+              >(para pedidos mayores a 10 unidades, los comentarios son
+              obligatorios)</small
+            >
+          </p>
 
-                    <p>
-                        <label for="postre">Postre</label><br>
-                        <select name="postre" id="postre" >
-                            <option value="">--selecciona un postre--</option>
-                            <option value="brownie">Brownie Casero</option>
-                            <option value="croissant">Croissant de Mantequilla</option>
-                            <option value="cheesecake">cheesecake</option>
-                        </select>
-                    </p>
+          <p>
+            <label>Extras</label><br />
+            <input type="checkbox" id="leche" name="extras" value="leche" />
+            <label for="leche">Leche Vegetal</label>
+            <input type="checkbox" id="shot" name="extras" value="shot" />
+            <label for="shot">Extra Shot</label>
+            <input type="checkbox" id="azucar" name="extras" value="azucar" />
+            <label for="azucar">Sin Azucar</label>
+          </p>
 
-                    <p>
-                        <label>Tamaño</label><br>
-                        <input type="radio" id="pequeño" name="tamaño" value="pequeño" required>
-                        <label for="pequeño">Pequeño</label>
-                        <input type="radio" id="mediano" name="tamaño" value="mediano">
-                        <label for="mediano">Mediano</label>
-                        <input type="radio" id="grande" name="tamaño" value="grande">
-                        <label for="grande">Grande</label>
-                    </p>
+          <p>
+            <label for="comentarios">Indicaciones / comentarios</label> <br />
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="4"
+              placeholder="si tu pedido es grande, detalla aqui."
+            >
+            </textarea>
+          </p>
+        </fieldset>
 
-                    <p>
-                        <label for="cantidad">Cantidad *</label><br>
-                        <input type="number" id="cantidad" name="cantidad" min="1" max="50" value="1" required>
-                        <small>(para pedidos mayores a 10 unidades, los comentarios son obligatorios)</small>
-                    </p>
+        <br />
 
-                    <p>
-                        <label>Extras</label><br>
-                        <input type="checkbox" id="leche" name="extras" value="leche">
-                        <label for="leche">Leche Vegetal</label>
-                        <input type="checkbox" id="shot" name="extras" value="shot">
-                        <label for="shot">Extra Shot</label>
-                        <input type="checkbox" id="azucar" name="extras" value="azucar">
-                        <label for="azucar">Sin Azucar</label>
-                    </p>
+        <fieldset>
+          <legend>Entrega</legend>
+          <p>
+            <input
+              type="radio"
+              id="retiro"
+              name="tipo_entrega"
+              value="retiro"
+              required
+            />
+            <label for="retiro">Retiro en tienda</label>
+            <input
+              type="radio"
+              id="domicilio"
+              name="tipo_entrega"
+              value="domicilio"
+            />
+            <label for="domicilio">Entrega a domicilio</label>
+          </p>
 
-                    <p>
-                        <label for="comentarios">Indicaciones / comentarios</label> <br>
-                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="si tu pedido es grande, detalla aqui.">
-                        </textarea>
-                    </p>
-                </fieldset>
+          <p>
+            <label for="direccion">Direccion (si es domicilio)</label><br />
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              placeholder="Ej: Calle, numero, Referencia"
+            />
+          </p>
+        </fieldset>
 
-                <br>
+        <br />
+        <input type="hidden" name="sucursal" value="central" />
+        <button type="submit" class="btn btn-primario">Enviar pedido</button>
+        <butotn type="reset" class="btn btn-secundario">Limpiar</butotn>
+      </form>
+    </main>
 
-                <fieldset>
-                    <legend>Entrega</legend>
-                    <p>
-                        <input type="radio" id="retiro" name="tipo_entrega" value="retiro" required>
-                        <label for="retiro">Retiro en tienda</label>
-                        <input type="radio" id="domicilio" name="tipo_entrega" value="domicilio">
-                        <label for="domicilio">Entrega a domicilio</label>
-                    </p>
-
-                    <p>
-                        <label for="direccion">Direccion (si es domicilio)</label><br>
-                        <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle, numero, Referencia">
-                    </p>
-                </fieldset>
-
-                <br>
-                <input type="hidden" name="sucursal" value="central">
-                <button type="submit" class="btn btn-primario">Enviar pedido</button>
-                <butotn type="reset" class="btn btn-secundario">Limpiar</butotn>
-            </form>
-
-
-        </main>
-
-        <footer>
-            <p>&copy;2026 Cafeteria aroma - todos los derechos reservados</p>
-        </footer>
-
-    </body>
-</html>     
-
-
-
+    <footer>
+      <p>&copy;2026 Cafeteria aroma - todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
