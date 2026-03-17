@@ -376,15 +376,6 @@ aside ul li a:hover {
   /* espacio externo */
 }
 
-.caja-padding {
-  padding: 50px;
-
-  /* width: 200px;
-  background-color: #ffe0b2;
-  border: 3px solid brown;
-  margin: 15px; */
-}
-
 .caja-margen {
   background-color: #c8e6c9;
   border: 2px solid green;
@@ -414,4 +405,161 @@ aside ul li a:hover {
   box-sizing: border-box;
   padding: 30px;
   border: 5px solid;
+}
+
+/* TIPOGRAFÍA BASE AROMA */
+/* Si agregaste Google Fonts */
+
+:root {
+  /* Escala tipográfica */
+
+  /* párrafos */
+  --fs-base: 16px;
+  /* notas, pie */
+  --fs-sm: 14px;
+  --fs-h3: 20px;
+  --fs-h2: 24px;
+  --fs-h1: 32px;
+
+  /* Pilas tipográficas */
+
+  --font-body:
+    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-heading:
+    "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+/* Si NO agregaste Google Fonts, usa esta pila “local”: */
+
+:root {
+  --fs-base: 16px;
+  --fs-sm: 14px;
+  --fs-h3: 20px;
+  --fs-h2: 24px;
+  --fs-h1: 32px;
+  --font-body:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans- serif;
+
+  --font-heading:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+/* 1rem = 16px */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  /* buen contraste sobre tu fondo #fdf6f0 */
+  color: #222;
+}
+
+/* Jerarquía de títulos (usa tu color marrón existente) */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  /* mantengo tu línea visual */
+  color: brown;
+  /* lo tenías ya */
+  text-align: center;
+  line-height: 1.25;
+  margin: 0.6em 0 0.4em;
+}
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+/* Párrafos y texto auxiliar */
+
+p {
+  font-size: var(--fs-base);
+}
+small,
+tfoot td {
+  font-size: var(--fs-sm);
+}
+
+/* Legibilidad en bloques de lectura */
+main {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Longitud de línea cómoda en párrafos largos */
+section p {
+  /* ~70 caracteres por línea */
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+  /* títulos centrados, textos alineados a la izquierda  */
+  text-align: left;
+}
+
+/* Párrafos dentro de aside y tablas: evita líneas muy largas */
+aside p,
+td,
+th {
+  line-height: 1.5;
+}
+
+nav a {
+  /* ya lo tenías en bold; 600 con Inter queda bien */
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
+caption {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+thead th {
+  font-weight: 600;
+}
+tfoot td {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+label {
+  font-weight: 600;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #8d7b6f;
+}
+button {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Eleva un poco el contraste general del texto */
+body {
+  color: #1b1b1b;
+}
+/* Enlaces del nav: asegúrate de AA mínimo */
+nav a {
+  color: #2d2019;
+}
+/* ya lo tenías */
+nav a:hover {
+  color: #ff5722;
 }
