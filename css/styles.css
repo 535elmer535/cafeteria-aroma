@@ -563,3 +563,91 @@ nav a {
 nav a:hover {
   color: #ff5722;
 }
+
+/* Jerarquía tipográfica global */
+
+/* h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+} */
+
+h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.25rem);
+}
+
+/* h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+} */
+
+h2 {
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+}
+
+/* h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+} */
+
+h3 {
+  font-size: clamp(1.2rem, 1.5vw, 1.35rem);
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Párrafo destacado de introducción */
+
+.lead {
+  /* un poco más grande */
+  font-size: 1.125rem;
+  /* más aire */
+  line-height: 1.75;
+  max-width: 70ch;
+  /* centrado del bloque en el ancho limitado */
+  margin: 0 auto;
+}
+
+/* Captions y celdas */
+caption {
+  font-family: var(--font-heading, inherit);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-align: center;
+  padding: 6px 0;
+}
+thead th {
+  font-weight: 600;
+}
+tbody td {
+  font-size: 0.95rem;
+}
+tfoot td {
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* Lectura cómoda en secciones de texto */
+section p {
+  /* ~70 caracteres por línea */
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+  /* párrafos alineados a la izquierda */
+  text-align: left;
+}
+/* Subtítulos centrados ya existen en tu CSS; no toques h2/h3 */
+
+/* Énfasis tipográfico en UI */
+label {
+  font-weight: 600;
+}
+button,
+.btn {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  /* cámbialo a uppercase si lo prefieres */
+  text-transform: none;
+}
