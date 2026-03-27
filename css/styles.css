@@ -651,3 +651,84 @@ button,
   /* cámbialo a uppercase si lo prefieres */
   text-transform: none;
 }
+
+/* flexbox en la seccion destacados */
+
+.destacados {
+  /* Activa flexbox */
+  display: flex;
+  /* Espacio uniforme entre elementos */
+  justify-content: space-around;
+  /* Alineación vertical */
+  align-items: center;
+  /* Espacio entre los bloques */
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Estilo para cada ítem */
+.destacados .item {
+  background-color: #f8e1d4;
+  border: 1px solid #d7ccc8;
+  padding: 15px;
+  /* Todos crecen al mismo tamaño */
+  flex: 1;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.destacados {
+  display: flex;
+  /* de fila pasa a columna */
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  /* centra los enlaces */
+  justify-content: center;
+  /* espacio entre enlaces */
+  gap: 15px;
+  background-color: #e6ccb2;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .destacados {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* nav de pedido */
+.fila {
+  display: flex;
+  gap: 15px;
+}
+.fila label,
+.fila input {
+  flex: 1;
+}
+
+/* nav de index */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #f8e1d4;
+}
+
+/* menu-flex */
+.menu-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
